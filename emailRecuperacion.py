@@ -5,8 +5,8 @@ from tkinter import messagebox
 
 class EmailSender:
     def __init__(self):
-        self.remitente = "asmdbedtgmail.com"  # Cambia esto a tu correo
-        self.contraseña = "ASDAA0905"  # Cambia esto a tu contraseña
+        self.remitente = "222h17117@alumno.ujat.mx"  # Cambia esto a tu correo
+        self.contraseña = "Asmd@090904"  # Cambia esto a tu contraseña
 
     def enviar_email(self, email, contrasenia):
         """Envía un correo con la contraseña al usuario."""
@@ -19,7 +19,7 @@ class EmailSender:
             cuerpo = f"Su contraseña es: {contrasenia}"
             msg.attach(MIMEText(cuerpo, 'plain'))
 
-            with smtplib.SMTP('smtp.gmail.com', 587) as servidor:  # Cambia smtp.example.com a tu servidor SMTP
+            with smtplib.SMTP('smtp-mail.outlook.com', 587) as servidor:  # Cambia smtp.example.com a tu servidor SMTP
                 servidor.starttls()
                 servidor.login(self.remitente, self.contraseña)
                 servidor.send_message(msg)
